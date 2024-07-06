@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <link rel="stylesheet" href="./assets/css/venobox.min.css">
+  <link rel="stylesheet" href="./assets/css/animate.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+  <!-- Inline CSS -->
+  
+</head>
+<body>
+  <!-- Login Section -->
+  <section class="login">
+    <div class="container">
+      <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="row container m-0 p-0">
+            <div class="form-group ">
+                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+              </div>
+              <div class="form-group ">
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+              </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-2"></div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-success btn-block">Login</button>
+            </div>
+            <div class="col-2"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content (Initially Hidden) -->
+  <div class="main-content">
+    <div class="row bg-dark text-white rounded-end pb-1">
+      <div class="col-3 ps-5 d-flex justify-content-start">
+        <img src="/assets/img/me.jpg" 
+             style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" 
+             alt=""
+             class="mt-1 ms-1 ps-0">
+        <h5 class="m-1 p-2 ">Sadikur Rahman</h5>
+      </div>
+      <!-- <div class="col-7">
+        <h5 class="m-1 p-1"></h5>
+      </div> -->
+      <div class="col-1">
+        <div class="countdown_con countdown__days d-flex justify-content-center">
+            <h4 class="number mt-1 pt-1 blink"></h4>
+            &ThickSpace;
+            <h5  class="mt-1 pt-2">day</h5>
+        </div>
+    </div>
+    <div class="col-2">
+      <div class="countdown_con countdown__hours d-flex justify-content-center">
+          <h5 class="number mt-1 pt-2 "></h5>
+          &ThickSpace;
+          <h5  class="mt-1 pt-2 bli">Hour</h5>
+      </div>
+  </div>
+  <div class="col-2">
+    <div class="countdown_con countdown__minutes d-flex justify-content-center">
+        <h5 class="number mt-1 pt-2 "></h5>
+        &ThickSpace;
+        <h5  class="mt-1 pt-2 bli">Min</h5>
+    </div>
+</div>
+<div class="col-1">
+  <div class="countdown_con countdown__seconds d-flex justify-content-center">
+      <h5 class="number mt-1 pt-2 "></h5>
+      &ThickSpace;
+      <h5 class="mt-1 pt-2 bli">Sec</h5>
+  </div>
+</div>
+      
+      <div class="col-3">
+        <div class="d-flex justify-content-center bg-dark text-white rounded-pill">
+          <img src="/assets/img/palm-tree.png" 
+               style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" 
+               alt=""
+               class="m-1 p-0">
+          <h5 class="m-1 p-2   text-right saved-value" id="saved-value">
+            <p id="saved-counter"></p>
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center mt-5 wrapper">
+      <svg>
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+          plant trees
+        </text>
+      </svg>
+      <div class="row-2 counter-display m-2 p-2 d-flex justify-content-center">
+        <div class="col-3"><h2 class="text-white rounded-pill"></h2></div>
+        <div class="col-3"><h1 id="counter-value" class="bg-dark text-white rounded-pill">0</h1></div>
+        <div class="col-3"><h2 class="text-white rounded-pill"></h2></div>
+        
+      </div>
+      <div class="counter-controls">
+        <div class="row-2 m-5">
+          <button id="increase" class="btn btn-success mx-2 save">Increase</button>
+          <button id="decrease" class="btn btn-danger mx-2 saver">Decrease</button>
+          <!-- <button id="reset" class="btn btn-secondary mx-2">Reset</button> -->
+        </div>
+        <div class="row-2 m-5">
+          <button id="save1" class="btn btn p mx-2">+10</button>
+          <button id="save2" class="btn btn p mx-2">+16</button>
+          <button id="save3" class="btn btn p mx-2">+50</button>
+          <button id="save4" class="btn btn p mx-2">+100</button>
+        </div>
+        <div class="row-2 m-5">
+          <h6>06/07/2024</h6>
+          <!-- <button id="offer" class="btn btn-warning mx-2">Offer</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Popup Ad -->
+  <div class="popup-ad" id="popup-ad">
+    
+    <p>5820</p>
+  </div>
+
+  <!-- Bootstrap and other JavaScript libraries -->
+  <script src="./assets/js/jquery-3.5.1.min.js"></script>
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/waypoints.min.js"></script>
+  <script src="./assets/js/jquery.counterup.min.js"></script>
+  <script src="./assets/js/venobox.min.js"></script>
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+</body>
+</html>
